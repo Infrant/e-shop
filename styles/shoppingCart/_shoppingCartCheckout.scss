@@ -1,0 +1,170 @@
+%shoppingCartBtn {
+    padding: 10px 14px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-transform: uppercase;
+    align-self: flex-start;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $mainColor;
+        color: #ffffff;
+        box-shadow: 0 2px 5px #333333;
+        border: 1px solid $mainColor;
+    }
+}
+
+%shoppingCartH2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222222;
+    text-transform: uppercase;
+}
+
+%shoppingCartInputSelect {
+    padding: 10px 15px;
+    border: 1px solid #eaeaea;
+    outline: none;
+    font-weight: 300;
+    height: 45px;
+    box-sizing: border-box;
+}
+%inputPlaceholder {
+    font-weight: 300;
+    color: #b1b1b1;
+    text-transform: capitalize;
+}
+.checkoutWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+    align-items: start;
+    margin-bottom: 60px;
+}
+.selectBlack {
+    color: #222222 !important;
+}
+.shippingAddress {
+    display: flex;
+    flex-direction: column;
+
+    & > *:not(:first-child) {
+        margin-top: 22px;
+    }
+
+    h2 {
+        @extend %shoppingCartH2;
+    }
+
+    select,
+    input {
+        @extend %shoppingCartInputSelect;
+    }
+
+    select {
+        text-transform: capitalize;
+        color: #b1b1b1;
+    }
+
+    input::placeholder {
+        @extend %inputPlaceholder;
+    }
+
+    .getQuoteBtn {
+        @extend %shoppingCartBtn;
+    }
+    .selectWrapper {
+        position: relative;
+        select {
+            appearance: none;
+            width: 100%;
+            cursor: pointer;
+        }
+        i {
+            position: absolute;
+            color: #b1b1b1;
+            right: 12px;
+            top: (45px-16px) / 2;
+        }
+    }
+}
+.couponDiscount {
+    display: flex;
+    flex-direction: column;
+
+    & > *:not(:first-child) {
+        margin-top: 25px;
+    }
+
+    h2 {
+        @extend %shoppingCartH2;
+    }
+
+    .enterCouponText {
+        font-size: 14px;
+        font-weight: 300;
+        color: #000000;
+    }
+
+    input {
+        @extend %shoppingCartInputSelect;
+    }
+
+    input::placeholder {
+        @extend %inputPlaceholder;
+    }
+
+    .applyCouponBtn {
+        @extend %shoppingCartBtn;
+    }
+}
+.toCheckoutWrapper {
+    padding: 40px;
+    background-color: #f5f3f3;
+
+    .subTotal {
+        font-size: 11px;
+        color: #4a4a4a;
+        text-transform: uppercase;
+        text-align: right;
+        margin-bottom: 12px;
+
+        span {
+            margin-left: 25px;
+        }
+    }
+
+    .grandTotal {
+        font-size: 16px;
+        font-weight: bold;
+        color: #222222;
+        text-transform: uppercase;
+        text-align: right;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e2e2e2;
+        margin-bottom: 17px;
+
+        span {
+            color: $mainColor;
+            margin-left: 25px;
+        }
+    }
+
+    .toCheckoutBtn {
+        padding: 15.5px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        background-color: $mainColor;
+        border: none;
+        outline: none;
+    }
+}

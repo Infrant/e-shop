@@ -1,0 +1,59 @@
+.topInfoWrapper {
+    min-height: 665px;
+    background-color: #e8e8e8;
+
+    @media (max-width: 880px) {
+        min-height: 465px;
+    }
+    @media (max-width: 768px) {
+        min-height: 365px;
+    }
+}
+.topInfo {
+    min-height: inherit;
+    position: relative;
+    background: url(#{$imagesPath}topInfoBack.png) 98% top / 53% no-repeat;
+
+    @media (max-width: 880px) {
+        background-size: contain;
+        background-position: right 15px bottom;
+    }
+    .topInfoText {
+        border-left: 12px solid $mainColor;
+        padding-left: 12px;
+        max-height: 92px;
+        position: absolute;
+        top: 224px;
+        font-weight: 900;
+        color: #222222;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        @media (max-width: 580px) {
+            padding-left: 6px;
+        }
+
+        .theBrand {
+            font-size: 60px;
+            line-height: 41.4px;
+
+            @media (max-width: 580px) {
+                font-size: 30px;
+                background: rgba(255, 255, 255, 0.6);
+            }
+        }
+        .ofLuxerious {
+            font-size: 40px;
+            margin-top: 11px;
+
+            @media (max-width: 580px) {
+                font-size: 20px;
+                background: rgba(255, 255, 255, 0.6);
+            }
+
+            span {
+                color: $mainColor;
+            }
+        }
+    }
+}

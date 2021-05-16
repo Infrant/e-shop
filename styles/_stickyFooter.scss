@@ -1,0 +1,8 @@
+.siteWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.siteTop {
+    flex-grow: 1;
+}

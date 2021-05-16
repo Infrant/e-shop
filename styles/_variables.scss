@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
+$mainColor: #f16d7f;
+$imagesPath: "../images/";
+$mainFont: "Lato", sans-serif;
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    @media (max-width: 1170px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+input,
+button,
+select {
+    font-family: $mainFont;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+.animationBtn {
+    transition-duration: 0.3s;
+
+    &:hover {
+        box-shadow: 0 2px 5px #333333;
+        background: darken($mainColor, 5%) !important;
+        // border-radius: 3px;
+        cursor: pointer;
+    }
+}
+.hidden {
+    opacity: 0;
+}

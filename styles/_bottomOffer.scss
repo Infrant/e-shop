@@ -1,0 +1,182 @@
+.bottomOfferFlexWrapper {
+    margin-top: 113px;
+    margin-bottom: 97px;
+
+    @media (max-width: 1169px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: 425px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.bottomOfferWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    @media (max-width: 1169px) {
+        grid-template-columns: 767px;
+    }
+
+    @media (max-width: 796px) {
+        width: 100%;
+        grid-template-columns: auto;
+    }
+
+    .offerForWomen {
+        position: relative;
+        width: 767px;
+        height: 529px;
+        background: url(#{$imagesPath}offerForWoman.png) no-repeat, url(#{$imagesPath}offerForWomanLayer.png) no-repeat;
+        background-size: cover;
+        background-blend-mode: overlay;
+
+        @media (max-width: 1169px) {
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            background-position: left -100px center;
+        }
+
+        @media (max-width: 500px) {
+            background-position: left -200px center;
+        }
+
+        .offerForWomenTextWrapper {
+            position: absolute;
+            left: 30px;
+            top: 140px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+            color: #ffffff;
+
+            @media (max-width: 600px) {
+                top: 230px;
+            }
+
+            @media (max-width: 600px) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media (max-width: 320px) {
+                top: 160px;
+            }
+
+            .offerForWomenTextTop {
+                font-size: 54px;
+
+                @media (max-width: 320px) {
+                    line-height: 54px;
+                }
+
+                span {
+                    color: $mainColor;
+                }
+            }
+
+            .offerForWomenTextBottom {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .prosWrapper {
+        background-color: #222224;
+        padding: 48px 36px 0 36px;
+        box-sizing: border-box;
+
+        @media (max-width: 1169px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 28px 16px 28px 16px;
+        }
+
+        section {
+            position: relative;
+            padding-left: 75px;
+
+            @media (max-width: 425px) {
+                padding-left: 0;
+            }
+
+            &:not(:first-child) {
+                margin-top: 54px;
+
+                @media (max-width: 425px) {
+                    margin-top: 25px;
+                }
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @media (max-width: 425px) {
+                    position: inherit;
+                    background-position: center center;
+                    width: 100% !important;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:first-child::before {
+                width: 45px;
+                height: 32px;
+                background-image: url(#{$imagesPath}prosDelivery.png);
+            }
+            &:nth-child(2)::before {
+                width: 40px;
+                height: 40px;
+                background-image: url(#{$imagesPath}prosSales.png);
+            }
+            &:last-child::before {
+                width: 47px;
+                height: 35px;
+                background-image: url(#{$imagesPath}prosQuality.png);
+            }
+
+            h2 {
+                margin: 0 0 17px 0;
+                font-size: 20px;
+                font-weight: bold;
+                color: #fbfbfb;
+                letter-spacing: 0.03em;
+
+                @media (max-width: 425px) {
+                    text-align: center;
+                    margin: 0 0 10px 0;
+                }
+            }
+
+            p {
+                margin: 0;
+                width: 226px;
+                font-size: 14px;
+                font-weight: 300;
+                color: #fbfbfb;
+                letter-spacing: 0.03em;
+                line-height: 24px;
+
+                @media (max-width: 425px) {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

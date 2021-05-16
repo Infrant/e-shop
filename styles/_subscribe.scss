@@ -1,0 +1,186 @@
+.subscribeBack {
+    min-height: 438px;
+    background: url(#{$imagesPath}subscribeBack.png) center bottom no-repeat, rgba(242, 242, 242, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.subscribeWrapper {
+    min-height: inherit;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 999px) {
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+    }
+    .userReview {
+        padding-top: 120px;
+        padding-left: 110px;
+        border-right: 1px solid #ffffff;
+        position: relative;
+
+        @media (max-width: 999px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 0;
+            padding-top: 20px;
+            border: none;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: url(#{$imagesPath}reviewPhoto.png) no-repeat;
+            width: 100%;
+            height: 83px;
+            top: 111px;
+            left: 0;
+
+            @media (max-width: 999px) {
+                position: initial;
+                background-position: center;
+            }
+        }
+
+        &Text {
+            width: 425px;
+            font-size: 16px;
+            font-style: italic;
+            color: #222224;
+            letter-spacing: 0.03em;
+            line-height: 26px;
+
+            &::before {
+                content: open-quote;
+            }
+
+            &::after {
+                content: close-quote;
+            }
+
+            @media (max-width: 999px) {
+                text-align: center;
+            }
+
+            @media (max-width: 454px) {
+                width: 100%;
+            }
+        }
+
+        &Name {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: $mainColor;
+            letter-spacing: 0.03em;
+
+            span {
+                font-size: 12px;
+                font-weight: 300;
+                color: #222224;
+                letter-spacing: 0.03em;
+            }
+
+            @media (max-width: 999px) {
+                text-align: center;
+            }
+        }
+
+        &SliderWrapper {
+            display: flex;
+
+            .userReviewSlider {
+                margin-top: 40px;
+                width: 38px;
+                height: 4px;
+                background-color: #d6d6d6;
+
+                &:not(:last-child) {
+                    margin-right: 13px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $mainColor;
+                }
+            }
+        }
+    }
+
+    .subscribe {
+        margin-top: 148px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 999px) {
+            margin-top: 40px;
+        }
+
+        &Heading {
+            font-size: 24px;
+            color: #222224;
+            text-align: center;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        &Text {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #222224;
+            text-align: center;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        &Form {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 23px;
+            overflow: hidden;
+
+            @media (max-width: 415px) {
+                width: 100%;
+            }
+
+            &Input {
+                height: 46px;
+                width: 282px;
+                background-color: #e1e1e1;
+                border: none;
+                outline: none;
+                padding: 15px 28px;
+                box-sizing: border-box;
+
+                &::placeholder {
+                    font-size: 14px;
+                    color: #222224;
+                    letter-spacing: 0.03em;
+                    text-transform: capitalize;
+                }
+
+                @media (max-width: 415px) {
+                    width: 100%;
+                }
+            }
+
+            &Btn {
+                height: 46px;
+                padding: 15px 20px;
+                border: none;
+                outline: none;
+                background-color: $mainColor;
+                font-size: 14px;
+                color: #ffffff;
+                text-align: center;
+                letter-spacing: 0.03em;
+                box-sizing: border-box;
+            }
+        }
+    }
+}

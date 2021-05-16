@@ -1,0 +1,77 @@
+.singlePageSlider {
+    min-height: 777px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &LeftArrow {
+        padding: 9px 17.5px;
+        background-color: rgba(42, 42, 42, 0.15);
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $mainColor;
+        }
+
+        &:hover i {
+            animation-name: singlePageSliderLeftArrow;
+            animation-duration: 1.25s;
+            animation-iteration-count: infinite;
+        }
+
+        i {
+            @keyframes singlePageSliderLeftArrow {
+                from {
+                }
+
+                50% {
+                    transform: translateX(-10px);
+                }
+
+                to {
+                }
+            }
+        }
+    }
+
+    &RightArrow {
+        padding: 9px 17.5px;
+        background-color: rgba(42, 42, 42, 0.15);
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $mainColor;
+        }
+
+        &:hover i {
+            animation-name: singlePageSliderRightArrow;
+            animation-duration: 1.25s;
+            animation-iteration-count: infinite;
+        }
+
+        i {
+            @keyframes singlePageSliderRightArrow {
+                from {
+                }
+
+                50% {
+                    transform: translateX(10px);
+                }
+
+                to {
+                }
+            }
+        }
+    }
+
+    &Img {
+        align-self: flex-start;
+    }
+}

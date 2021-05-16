@@ -1,0 +1,220 @@
+.checkoutFormWrapper {
+    margin-top: 55px;
+    margin-bottom: 90px;
+}
+.checkoutDetails {
+    border-bottom: 1px solid #e8e8e8;
+    appearance: none;
+}
+.checkoutSummary {
+    padding: 35px 0px;
+    outline: none;
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222222;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+}
+.checkoutForm {
+    padding-left: 25px;
+    // margin-top: 35px;
+    padding-bottom: 60px;
+    display: flex;
+}
+.guestOrRegisterForm {
+    display: flex;
+    flex-direction: column;
+    margin-right: 300px;
+
+    &TopHeading,
+    &BottomHeading {
+        margin: 0 0 10px;
+        font-size: 13px;
+        color: #222222;
+        text-transform: uppercase;
+    }
+
+    .guestOrRegisterFormBottomHeading {
+        margin-top: 15px;
+    }
+
+    &TopText,
+    &BottomText {
+        margin-bottom: 30px;
+        font-size: 13px;
+        color: #b3b2b2;
+        line-height: 20px;
+    }
+
+    input {
+        display: none;
+
+        &:checked + label::before {
+            background: url(#{$imagesPath}checkoutRadioChecked.png) no-repeat;
+        }
+    }
+
+    label {
+        display: inline-block;
+        position: relative;
+        font-size: 12px;
+        color: #222222;
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        padding-left: 28px;
+    }
+
+    label::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background: url(#{$imagesPath}checkoutRadio.png) no-repeat;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    a {
+        font-size: 13px;
+        color: #b3b2b2;
+        line-height: 20px;
+        text-decoration: none;
+
+        &:hover {
+            color: $mainColor;
+        }
+        &:hover i {
+            animation-name: checoutFormDoubleAngle;
+            animation-duration: 1.25s;
+            animation-iteration-count: infinite;
+        }
+
+        i {
+            @keyframes checoutFormDoubleAngle {
+                from {
+                }
+
+                50% {
+                    transform: translateX(-10px);
+                }
+
+                to {
+                }
+            }
+        }
+    }
+    &Btn {
+        align-self: flex-start;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        text-transform: uppercase;
+        padding: 15.5px 53px;
+        outline: none;
+        font-size: 14px;
+        font-weight: bold;
+        color: #4a4a4a;
+        margin-top: 30px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $mainColor;
+            color: #ffffff;
+            box-shadow: 0 2px 5px #333333;
+            border: 1px solid $mainColor;
+        }
+    }
+}
+.checkoutLoginForm {
+    display: flex;
+    flex-direction: column;
+
+    &TopHeading {
+        margin: 0 0 10px;
+        font-size: 13px;
+        color: #222222;
+        text-transform: uppercase;
+    }
+
+    &TopText {
+        font-size: 13px;
+        color: #b3b2b2;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+
+    label[for="email"],
+    label[for="password"] {
+        font-size: 12px;
+        color: #222222;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+
+        span {
+            font-size: 17px;
+            color: #ff0d0d;
+            line-height: 20px;
+        }
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        height: 45px;
+        width: 390px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        box-sizing: border-box;
+        outline: none;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    &Required {
+        font-size: 13px;
+        color: #ff0d0d;
+        line-height: 20px;
+        text-transform: capitalize;
+        margin-bottom: 29px;
+    }
+
+    .checkoutLoginFormBtnWrapper {
+        .checkoutLoginFormBtn {
+            align-self: flex-start;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+            text-transform: uppercase;
+            padding: 15.5px 66px;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            color: #4a4a4a;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $mainColor;
+                color: #ffffff;
+                box-shadow: 0 2px 5px #333333;
+                border: 1px solid $mainColor;
+            }
+        }
+        span {
+            margin-left: 32px;
+            font-size: 14px;
+            color: #222222;
+            line-height: 20px;
+            text-transform: capitalize;
+        }
+    }
+}

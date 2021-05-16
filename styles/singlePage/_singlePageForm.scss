@@ -1,0 +1,197 @@
+.singlePageFormWrapper {
+    border: 1px solid #eaeaea;
+    padding: 73px 250px 122px;
+    margin-top: -85px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    opacity: 0.99;
+    margin-bottom: 120px;
+}
+.singlePageFormTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #eaeaea;
+
+    &Collection {
+        margin-bottom: 15px;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        color: $mainColor;
+        text-align: center;
+        line-height: 24px;
+        border-bottom: 1px solid #eaeaea;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 38%;
+            height: 3px;
+            background-color: $mainColor;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &Heading {
+        font-size: 18px;
+        font-weight: 900;
+        color: #4d4d4d;
+        text-align: center;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+
+    &Text {
+        font-size: 14px;
+        font-weight: 300;
+        color: #5e5e5e;
+        text-align: center;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    &Material {
+        font-size: 14px;
+        font-weight: bold;
+        color: #b9b9b9;
+        text-align: center;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        span {
+            color: #2f2f2f;
+        }
+
+        .material {
+            margin-right: 40px;
+        }
+    }
+
+    &Price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ef5b70;
+        text-align: center;
+        line-height: 24px;
+    }
+}
+.singlePageFormBottom {
+    display: grid;
+    column-gap: 53px;
+    row-gap: 28px;
+    grid-template-columns: repeat(3, 144px);
+    width: 537px;
+    margin: 0 auto;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2f2f2f;
+            line-height: 24px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+
+    .singlePageFormBottomColor {
+        select {
+            width: 100%;
+            height: 35px;
+            border: 1px solid #eaeaea;
+            color: #bcbcbc;
+            outline: none;
+            padding-left: 35px;
+            text-transform: capitalize;
+        }
+
+        .singlePageFormBottomSelectColorWrapper {
+            position: relative;
+        }
+    }
+
+    &Size {
+        select {
+            height: 35px;
+            border: 1px solid #eaeaea;
+            color: #bcbcbc;
+            outline: none;
+            padding-left: 10px;
+            text-transform: uppercase;
+        }
+    }
+
+    &Quantity {
+        input {
+            height: 35px;
+            border: 1px solid #eaeaea;
+            box-sizing: border-box;
+            color: #bcbcbc;
+            outline: none;
+            padding-left: 10px;
+        }
+    }
+
+    &Btn {
+        grid-column: 1/-1;
+        width: 537px;
+        height: 55px;
+        background-color: #ffffff;
+        border: 1px solid $mainColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: $mainColor;
+
+        &:hover {
+            color: #fff;
+            background-color: $mainColor;
+            box-shadow: 0 2px 5px #333333;
+        }
+
+        span {
+            margin-left: 15px;
+        }
+    }
+}
+.singlePageFormBottomSelectColorRed {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ef5b70;
+    top: 11px;
+    left: 14px;
+}
+.singlePageFormBottomSelectColorGreen {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    top: 11px;
+    left: 14px;
+}
+.singlePageFormBottomSelectColorBlue {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: blue;
+    top: 11px;
+    left: 14px;
+}

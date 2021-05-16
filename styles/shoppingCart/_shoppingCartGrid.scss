@@ -1,0 +1,118 @@
+.shoppingCartGrid {
+    margin-top: 90px;
+    & > .shoppingCartRow {
+        margin-top: 22px;
+    }
+}
+
+.shoppingCartHeading {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 150px) 49px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222222;
+    letter-spacing: -0.01em;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+
+    &Desc:not(:first-child) {
+        justify-self: center;
+        // text-align: center;
+        align-self: center;
+    }
+}
+.shoppingCartRow {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 150px) 49px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+
+    & > div:not(:first-child) {
+        justify-self: center;
+        align-self: center;
+        font-size: 13px;
+        color: #656565;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    &Product {
+        display: flex;
+
+        img {
+            display: block;
+            margin-right: 20px;
+        }
+
+        &Desc {
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            padding-bottom: 20px;
+
+            &Name {
+                font-size: 13px;
+                color: #222222;
+                text-transform: uppercase;
+                margin-bottom: 29px;
+            }
+
+            &Color,
+            &Size {
+                font-family: "Lato";
+                font-size: 13px;
+                color: #575757;
+                line-height: 20px;
+                text-transform: capitalize;
+
+                span {
+                    font-weight: 300;
+                    color: #6f6e6e;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    &Quantity {
+        input {
+            width: 54px;
+            height: 30px;
+            border: 1px solid #eaeaea;
+            text-align: center;
+            outline: none;
+            color: #656565;
+        }
+    }
+
+    &Action {
+        color: #c0c0c0 !important;
+    }
+}
+.shoppingCartGridBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+
+    & > button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        color: #4a4a4a;
+        text-transform: uppercase;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        padding: 15.5px 38px;
+
+        &:hover {
+            background-color: $mainColor;
+            color: #ffffff;
+            box-shadow: 0 2px 5px #333333;
+            border: 1px solid $mainColor;
+        }
+    }
+}
