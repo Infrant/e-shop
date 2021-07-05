@@ -254,6 +254,12 @@ select {
   z-index: 1;
 }
 
+@media (max-width: 1329px) {
+  .topHeader .shoppingCartDrop {
+    display: none;
+  }
+}
+
 .topHeader .shoppingCartDropProduct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,7 +498,7 @@ select {
 }
 
 .topNav a::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 3px;
   background: #f16d7f;
